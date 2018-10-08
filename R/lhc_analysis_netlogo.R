@@ -82,11 +82,13 @@ lhc_process_netlogo_result <- function(FILEPATH, LHCSAMPLE_RESULTFILENAME,
     }
   },
   error=function(cond) {
-    message("Error in finding files required for Spartan Netlogo Analysis")
+    message("Error in finding files required for Spartan Netlogo Analysis:")
+    message(cond)
     message("Spartan Function Terminated")
   },
   warning=function(cond) {
-    message("Error in finding files required for Spartan Netlogo Analysis")
+    message("Warning in finding files required for Spartan Netlogo Analysis")
+    message(cond)
     message("Spartan Function Terminated")
   })
 }
